@@ -30,8 +30,11 @@ SET(CMAKE_C_FLAGS_DEBUG "$ENV{CFLAGS} ${CFLAGS}")
 SET(CMAKE_C_FLAGS_RELEASE "$ENV{CFLAGS} ${CFLAGS}")
 
 include_directories("${ROOT}/include")
+include_directories("${ROOT}/src")
 # 设置库文件的查找路径
 link_directories("${ROOT}/lib")
-add_executable(${PROJECT_NAME} src/main.c)
+add_executable(${PROJECT_NAME} main.c)
+
+add_subdirectory(src)
 # 库链接到可执行文件中
-target_link_libraries(${PROJECT_NAME} PRIVATE cjson)
+target_link_libraries(${PROJECT_NAME} PRIVATE cjson hello)
