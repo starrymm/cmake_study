@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "cJSON.h"
-#include "hello.h"
+#include "hello_world.h"
 
 void main() {
     printf("hello cmake\n");
     cJSON *root = cJSON_CreateObject();
-    printHello();
+    printHelloWorld();
     return ;
 }

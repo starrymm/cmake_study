@@ -37,4 +37,4 @@ add_executable(${PROJECT_NAME} main.c)
 
 add_subdirectory(src)
 # 库链接到可执行文件中
-target_link_libraries(${PROJECT_NAME} PRIVATE cjson hello)
+target_link_libraries(${PROJECT_NAME} PRIVATE cjson hello_world)
